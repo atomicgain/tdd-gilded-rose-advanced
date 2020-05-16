@@ -10,12 +10,14 @@ public class BackstagePass {
     }
 
     public void oneDayPass() {
-        sellIn--;
         if (sellIn >10)
             quality++;
+        else if (sellIn <=5)
+            quality +=3;
         else if (sellIn <= 10)
             quality +=2;
 
+        sellIn--;
         quality=Math.min(50,quality);
     }
 
