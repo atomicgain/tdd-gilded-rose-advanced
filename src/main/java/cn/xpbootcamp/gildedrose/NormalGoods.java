@@ -12,14 +12,14 @@ public class NormalGoods {
     public void oneDayPass() {
         sellIn--;
         quality--;
-
+        quality=Math.max(0, quality);
     }
 
     public int getQuality() {
-        return 9;
+        return quality;
     }
 
     public int getSellIn() {
-        return 19;
+        return sellIn;
     }
 }
