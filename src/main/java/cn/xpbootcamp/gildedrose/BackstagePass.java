@@ -12,6 +12,8 @@ public class BackstagePass {
     public void oneDayPass() {
         if (sellIn >10)
             quality++;
+        else if (sellIn <=0)
+            quality =0;
         else if (sellIn <=5)
             quality +=3;
         else if (sellIn <= 10)
