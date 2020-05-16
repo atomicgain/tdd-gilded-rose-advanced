@@ -11,7 +11,10 @@ public class NormalGoods {
 
     public void oneDayPass() {
         sellIn--;
-        quality--;
+        if (sellIn > 0)
+            quality--;
+        else
+            quality-=2;
         quality=Math.max(0, quality);
     }
 
