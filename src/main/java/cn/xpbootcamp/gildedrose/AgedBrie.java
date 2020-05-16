@@ -12,6 +12,7 @@ public class AgedBrie {
     public void oneDayPass() {
         sellIn--;
         quality++;
+        quality=Math.min(50,quality);
     }
 
     public int getSellIn() {
