@@ -15,6 +15,8 @@ public class BackstagePass {
             quality++;
         else if (sellIn <= 10)
             quality +=2;
+
+        quality=Math.min(50,quality);
     }
 
     public int getSellIn() {
