@@ -26,4 +26,11 @@ public class SulfurasTest {
         assertThat(sulfuras.getSellIn()).isEqualTo(-1);
         assertThat(sulfuras.getQuality()).isEqualTo(50);
     }
+    @Test
+    public void should_return_sellIn_n1_quality_1_when_sulfuras_pass_1_day_given_sellIn_n1_quality_1 () {
+        Sulfuras sulfuras = new Sulfuras(-1,1);
+        sulfuras.oneDayPass();
+        assertThat(sulfuras.getSellIn()).isEqualTo(-1);
+        assertThat(sulfuras.getQuality()).isEqualTo(1);
+    }
 }
